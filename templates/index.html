@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glaucoma Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Logo" width="64">
+                <h2>Glaucoma Detection</h2>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="active">Make Predictions</a>
+                <a href="/about">About App</a>
+            </div>
+            <hr>
+            <div class="social-links">
+                <h3>Connect us On</h3>
+                <a href="https://instagram.com/your_instagram" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://twitter.com/your_twitter" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://linkedin.com/in/your_linkedin" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h1>Glaucoma Detection Using Advanced AI</h1>
+            <div class="upload-section">
+                <h2>Upload an Image</h2>
+                <form id="prediction-form" enctype="multipart/form-data">
+                    <div class="file-input-container">
+                        <input type="file" id="image-upload" name="image" accept=".jpg,.jpeg,.png">
+                        <label for="image-upload" class="file-input-label">
+                            Choose File
+                        </label>
+                        <span id="file-name">No file selected</span>
+                    </div>
+                    <button type="submit" class="submit-btn">Predict</button>
+                </form>
+            </div>
+            
+            <div id="preview-container" class="preview-container" style="display: none;">
+                <h3>Image Preview</h3>
+                <img id="image-preview" src="#" alt="Preview">
+            </div>
+            
+            <div id="result-container" class="result-container" style="display: none;">
+                <hr>
+                <h2>Result: <span id="prediction-result"></span></h2>
+            </div>
+            
+            <div id="loading-container" class="loading-container" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processing image...</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

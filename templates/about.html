@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Glaucoma Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Logo" width="64">
+                <h2>Glaucoma Detection</h2>
+            </div>
+            <div class="nav-links">
+                <a href="/">Make Predictions</a>
+                <a href="/about" class="active">About App</a>
+            </div>
+            <hr>
+            <div class="social-links">
+                <h3>Connect us On</h3>
+                <a href="https://instagram.com/your_instagram" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://twitter.com/your_twitter" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://linkedin.com/in/your_linkedin" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+        
+        <div class="main-content about-page">
+            <h1>About</h1>
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Logo" width="200">
+            </div>
+            <div class="about-text">
+                <p>
+                    This application uses a Vision Transformer model to detect glaucoma from eye images. Glaucoma is a group of eye conditions that damage the optic nerve, which is vital for good vision. This damage is often caused by abnormally high pressure in your eye.
+                </p>
+                <p>
+                    Our AI model has been trained on thousands of retinal images to accurately identify signs of glaucoma. Early detection is crucial for preventing vision loss from glaucoma, as damage caused by the disease cannot be reversed.
+                </p>
+                <p>
+                    This tool is meant to assist healthcare professionals and should not be used as a replacement for proper medical diagnosis. Always consult with an eye care specialist for proper diagnosis and treatment of eye conditions.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
