@@ -4,6 +4,6 @@ pandas==2.2.3
 pillow==10.4.0
 torch==2.5.1
 torchaudio==2.5.0
-torchvision==0.20
+torchvision==0.21
 opencv-python==4.10.0.84
 gunicorn==23.0.0
